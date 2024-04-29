@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introduction to static code analysis with Joern"
+title:  "Static code analysis I: Joern Basics"
 date:   2024-02-10 16:42:48 +0100
 categories: code analysis
 ---
