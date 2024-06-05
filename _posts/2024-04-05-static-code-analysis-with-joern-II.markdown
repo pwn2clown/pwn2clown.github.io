@@ -134,7 +134,7 @@ You can find more information on the underlying data structure on their official
 
 # 0x4 Investigating with Joern - detecting the vulnerability pattern
 
-The first step of our investigations is to find where string concatenation occurs as it's one of our criterias to determine if there's a chance that the SQL statement is corrupted. The Joern's AST allows us to detect such patterns. Indeed, the symbol "+" is an operator that is represented as a call node in the GPG, it is also part of the AST. In the AST, this node is linked to 2 child nodes: its operands. We're supposing that every "add" operation that has the type "java.lang.String" is likely to be injected into a SQL statement.
+The first step of our investigations is to find where string concatenation occurs as it's one of our criterias to determine if there's a chance that the SQL statement is corrupted. The Joern's AST allows us to detect such patterns. Indeed, the symbol "+" is an operator that is represented as a call node in the CPG, it is also part of the AST. In the AST, this node is linked to 2 child nodes: its operands. We're supposing that every "add" operation that has the type "java.lang.String" is likely to be injected into a SQL statement.
 
 Let's consider the following piece of code:
 
